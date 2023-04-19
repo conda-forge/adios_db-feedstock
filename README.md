@@ -1,11 +1,11 @@
-About adios_db
-==============
+About adios_db-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/adios_db-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/NOAA-ORR-ERD/adios_oil_database
 
 Package license: CC0-1.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/adios_db-feedstock/blob/main/LICENSE.txt)
 
 Summary: Package for working with data in the NOAA ADIOS Oil Database
 
