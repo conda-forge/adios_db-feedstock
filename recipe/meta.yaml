@@ -1,5 +1,5 @@
 {% set name = "adios_db" %}
-{% set version = "1.0.3" %}
+{% set version = "1.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/NOAA-ORR-ERD/adios_oil_database/archive/v{{ version }}.tar.gz
-  sha256: a898a1311ff271e122463f566e79f3a22955de994a131c142e8f8039c88d3612
+  sha256: 36d6868cd1a1fa47ff3d21385e3d5ee120e526575a9677d64a3cdea42fe0b3cf
 
 build:
   noarch: python
@@ -47,7 +47,7 @@ about:
     * A data validation framework (there is a small amount of validation included, it is fairly starightformward to add more.
     * Some computation on the data (interpolation, etc.)
     * Code to build an oil definition as required by the NOAA GNOME oil weathering model.
-  license:  CC0-1.0
+  license: CC0-1.0
   license_file: LICENSE.txt
   doc_url: https://noaa-orr-erd.github.io/adios_oil_database/
   dev_url: https://github.com/NOAA-ORR-ERD/adios_oil_database
