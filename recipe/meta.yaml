@@ -1,5 +1,5 @@
 {% set name = "adios_db" %}
-{% set version = "1.0.4" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -22,15 +22,18 @@ build:
     - adios_db_validate = adios_db.scripts.validate:main
     - adios_db_update_test_data = adios_db.scripts.update_test_data:main
     - adios_db_process_json = adios_db.scripts.process_json:run_through
+    - adios_db_read_noaa_csv = adios_db.scripts.read_noaa_csv:main
+    - adios_db_assign_ids = adios_db.scripts.assign_ids:main
+    - adios_db_add_labels = adios_db.scripts.add_labels:add_the_labels
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.9
     - pip
   run:
-    - python >=3.8
+    - python >=3.9
     - numpy >=1.20
-    - pynucos >=2.12
+    - pynucos >=3.1
 
 test:
   imports:
