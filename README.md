@@ -40,6 +40,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-adios--db-green.svg)](https://anaconda.org/conda-forge/adios-db) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/adios-db.svg)](https://anaconda.org/conda-forge/adios-db) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/adios-db.svg)](https://anaconda.org/conda-forge/adios-db) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/adios-db.svg)](https://anaconda.org/conda-forge/adios-db) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-adios_db-green.svg)](https://anaconda.org/conda-forge/adios_db) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/adios_db.svg)](https://anaconda.org/conda-forge/adios_db) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/adios_db.svg)](https://anaconda.org/conda-forge/adios_db) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/adios_db.svg)](https://anaconda.org/conda-forge/adios_db) |
 
 Installing adios_db
@@ -52,41 +53,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `adios_db` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `adios-db, adios_db` can be installed with `conda`:
 
 ```
-conda install adios_db
-```
-
-or with `mamba`:
-
-```
-mamba install adios_db
-```
-
-It is possible to list all of the versions of `adios_db` available on your platform with `conda`:
-
-```
-conda search adios_db --channel conda-forge
+conda install adios-db adios_db
 ```
 
 or with `mamba`:
 
 ```
-mamba search adios_db --channel conda-forge
+mamba install adios-db adios_db
+```
+
+It is possible to list all of the versions of `adios-db` available on your platform with `conda`:
+
+```
+conda search adios-db --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search adios-db --channel conda-forge
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search adios_db --channel conda-forge
+mamba repoquery search adios-db --channel conda-forge
 
-# List packages depending on `adios_db`:
-mamba repoquery whoneeds adios_db --channel conda-forge
+# List packages depending on `adios-db`:
+mamba repoquery whoneeds adios-db --channel conda-forge
 
-# List dependencies of `adios_db`:
-mamba repoquery depends adios_db --channel conda-forge
+# List dependencies of `adios-db`:
+mamba repoquery depends adios-db --channel conda-forge
 ```
 
 
@@ -108,7 +109,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
