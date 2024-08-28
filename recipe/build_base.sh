@@ -1,1 +1,0 @@
-cd adios_db && ${PYTHON} -m pip install . --no-deps -vv
