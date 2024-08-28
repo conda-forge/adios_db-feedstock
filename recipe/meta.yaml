@@ -1,5 +1,5 @@
 {% set name = "adios_db" %}
-{% set version = "1.2.0" %}
+{% set version = "1.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/NOAA-ORR-ERD/adios_oil_database/archive/v{{ version }}.tar.gz
-  sha256: 2779852cb10411341dc3d1d023c523b10a8bef2a43c179e67674b304b5dff837
+  sha256: 4936f4b765a0c24b2aaf6e0e5006a879f1e0d718a4d949447fb8fa539ff7ee68
 
 build:
   number: 0
