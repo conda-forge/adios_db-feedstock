@@ -10,7 +10,7 @@ source:
   sha256: 4936f4b765a0c24b2aaf6e0e5006a879f1e0d718a4d949447fb8fa539ff7ee68
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 outputs:
@@ -33,7 +33,7 @@ outputs:
         - setuptools
       run:
         - python >=3.9
-        - numpy >=2
+        - numpy >=1.24
         - pynucos >=3.3
     test:
       imports:
