@@ -1,5 +1,5 @@
 {% set name = "adios_db" %}
-{% set version = "1.2.4" %}
+{% set version = "1.2.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,24 +7,27 @@ package:
 
 source:
   url: https://github.com/NOAA-ORR-ERD/adios_oil_database/archive/v{{ version }}.tar.gz
-  sha256: 4936f4b765a0c24b2aaf6e0e5006a879f1e0d718a4d949447fb8fa539ff7ee68
+  sha256: 4f8188c762792386275f4d89129676f2b9985172213b299aa1ac88013a00a855
 
 build:
-  number: 2
+  number: 0
   noarch: python
 
 outputs:
   - name: adios_db
     script: build_base.sh
     entry_points:
-      - adios_db_init = adios_db.scripts.db_initialize:init_db_cmd
-      - adios_db_import = adios_db.scripts.db_import:import_db_cmd
-      - adios_db_oil_query = adios_db.scripts.oil_query:oil_query_cmd
+      - adios_db_add_labels = adios_db.scripts.add_labels:add_the_labels
+      - adios_db_assign_ids = adios_db.scripts.assign_ids:main
       - adios_db_backup = adios_db.scripts.db_backup:backup_db_cmd
-      - adios_db_restore = adios_db.scripts.db_restore:restore_db_cmd
-      - adios_db_validate = adios_db.scripts.validate:main
-      - adios_db_update_test_data = adios_db.scripts.update_test_data:main
+      - adios_db_import = adios_db.scripts.db_import:import_db_cmd
+      - adios_db_init = adios_db.scripts.db_initialize:init_db_cmd
+      - adios_db_oil_query = adios_db.scripts.oil_query:oil_query_cmd
       - adios_db_process_json = adios_db.scripts.process_json:run_through
+      - adios_db_read_noaa_csv = adios_db.scripts.read_noaa_csv:main
+      - adios_db_restore = adios_db.scripts.db_restore:restore_db_cmd
+      - adios_db_update_test_data = adios_db.scripts.update_test_data:main
+      - adios_db_validate = adios_db.scripts.validate:main
       - adios_db_eccc_compare = adios_db.scripts.eccc_compare_oils:compare_eccc_oils_cmd
     requirements:
       host:
@@ -40,6 +43,7 @@ outputs:
         - adios_db
       commands:
         - adios_db_process_json
+        - adios_db_validate
 
   - name: adios-db
     build:
