@@ -10,7 +10,7 @@ source:
   sha256: 4f8188c762792386275f4d89129676f2b9985172213b299aa1ac88013a00a855
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 outputs:
@@ -31,14 +31,16 @@ outputs:
       - adios_db_eccc_compare = adios_db.scripts.eccc_compare_oils:compare_eccc_oils_cmd
     requirements:
       host:
-        - python >=3.9
+        - python {{ python_min }}
         - pip
         - setuptools
       run:
-        - python >=3.9
+        - python >={{ python_min }}
         - numpy >=1.24
         - pynucos >=3.3
     test:
+      requires:
+        - python {{ python_min }}
       imports:
         - adios_db
       commands:
